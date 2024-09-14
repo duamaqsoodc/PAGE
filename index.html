@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's the Cutest?</title>
+    <style>
+        /* Set up a cute, flowery background */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-image: url('https://www.transparenttextures.com/patterns/flower.png');
+            background-color: #fffcf9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            border: 5px solid #ffccf9;
+            border-radius: 25px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ff6f61;
+            text-shadow: 2px 2px #ffe6f9;
+        }
+
+        .scroll-message {
+            font-size: 24px;
+            color: #ff9a8b;
+            text-shadow: 1px 1px #ffe6f9;
+        }
+
+        /* Button Styling */
+        .cute-button {
+            background-color: #ffccf9;
+            border: 3px solid #ff6f61;
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-shadow: 1px 1px #ff9a8b;
+        }
+
+        .cute-button:hover {
+            background-color: #ff9a8b;
+        }
+
+        /* Hidden message styling */
+        .final-message {
+            font-size: 36px;
+            color: #ff6f61;
+            background-color: #fff0f5;
+            border-radius: 25px;
+            padding: 20px;
+            margin-top: 30px;
+            border: 4px solid #ffccf9;
+            display: none; /* Hidden by default */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Who's the Cutest?</h1>
+        <div class="scroll-message">Click the button to find out...</div>
+        
+        <!-- Button to reveal the cutest message -->
+        <button class="cute-button" onclick="revealMessage()">Click Me!</button>
+
+        <!-- Hidden message, revealed after button click -->
+        <div id="reveal-message" class="final-message">
+            Rida is the cutest! 💖
+        </div>
+    </div>
+
+    <script>
+        // Function to reveal the hidden message
+        function revealMessage() {
+            var message = document.getElementById("reveal-message");
+            message.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
+
